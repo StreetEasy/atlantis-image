@@ -31,10 +31,8 @@ steps:
 trigger:
   event:
   - push
-  - pull_request
   branch:
   - master
-
 
 services:
 - name: docker
