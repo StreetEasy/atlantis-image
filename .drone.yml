@@ -16,7 +16,7 @@ steps:
     build_args:
     - ATLANTIS_VERSION=v0.10.1
     - SCENERY_VERSION=v0.1.5
-    - TERRAGRUNT_VERSION=1.16.9
+    - TERRAGRUNT_VERSION=0.28.18
     - AWS_CLI_VERSION=1.18.54
     - ENVKEY_VERSION=latest
     tags:
