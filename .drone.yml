@@ -35,6 +35,7 @@ trigger:
   branch:
   - master
 
+
 services:
 - name: docker
   image: docker:dind
