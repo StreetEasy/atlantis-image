@@ -45,3 +45,6 @@ services:
 volumes:
 - name: dockersock
   temp: {}
+
+node:
+  cluster: production-001
