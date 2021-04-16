@@ -23,10 +23,6 @@ ARG AWS_CLI_VERSION
 RUN apk add py-pip groff \
     && pip install awscli==${AWS_CLI_VERSION}
 
-ARG SCENERY_VERSION
-ADD https://github.com/dmlittle/scenery/releases/download/${SCENERY_VERSION}/scenery-${SCENERY_VERSION}-linux-amd64 /usr/local/bin/scenery
-RUN chmod +x /usr/local/bin/scenery
-
 COPY startup.sh /
 COPY repos.yaml /home/atlantis/
 
