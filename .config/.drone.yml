@@ -22,15 +22,15 @@ steps:
     - BUILDKIT_INLINE_CACHE=true
     - ATLANTIS_VERSION=v0.10.1
     - SCENERY_VERSION=v0.1.5
-    - TERRAGRUNT_VERSION=0.28.18_tf0.13.6
+    - TERRAGRUNT_VERSION=0.28.24_tf0.14.10
     - AWS_CLI_VERSION=1.18.54
     - ENVKEY_VERSION=latest
     cache_from:
     - zillownyc/atlantis:latest
     tags:
     - latest
-    - "0.10.1_tf13"
-    - "0.10_tf13"
+    - "0.10.1_tf14"
+    - "0.10_tf14"
 
 trigger:
   event:
