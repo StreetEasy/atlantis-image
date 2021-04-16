@@ -4,7 +4,7 @@ type: kubernetes
 
 steps:
 - name: build
-  image: zillownyc/drone-ecr:latest
+  image: plugins/docker
   volumes:
   - name: dockersock
     path: /var/run
@@ -13,7 +13,11 @@ steps:
   settings:
     daemon_off: true
     purge: false
-    repo: 164635793619.dkr.ecr.us-east-1.amazonaws.com/atlantis
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: zillownyc/atlantis
     build_args:
     - BUILDKIT_INLINE_CACHE=true
     - ATLANTIS_VERSION=v0.10.1
@@ -22,7 +26,7 @@ steps:
     - AWS_CLI_VERSION=1.18.54
     - ENVKEY_VERSION=latest
     cache_from:
-    - 164635793619.dkr.ecr.us-east-1.amazonaws.com/atlantis:latest
+    - zillownyc/atlantis:latest
     tags:
     - latest
     - "0.10.1_tf13"
